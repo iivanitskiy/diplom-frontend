@@ -23,7 +23,7 @@
             <!-- <a class="menu__articles" href="saved.html">Сохранённые статьи</a> -->
             <div class="menu__button">
               <a href="saved.html" class="menu__button-text">Авторизоваться</a>
-              <!-- <img src="src\images\logout.svg" alt="log-out" class="menu__button-image"> -->
+              <!-- <img src="<%=require('../../src/images/logout.svg').default%>" alt="log-out" class="menu__button-image"> -->
             </div>
           </div>
         </header>
@@ -42,7 +42,7 @@
           <h2 class="cards__title">Результаты поиска</h2>
           <div class="cards__result">
             <div class="card">
-              <img src="src\images\card-1.jpg" alt="card-image" class="card__image">
+              <img src="<%=require('../../src/images/card-1.jpg').default%>" alt="card-image" class="card__image">
               <p class="card__date">2 августа, 2019</p>
               <h3 class="card__title">Национальное достояние – парки</h3>
               <h4 class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</h4>
@@ -52,7 +52,7 @@
               </button>
             </div>
             <div class="card">
-              <img src="src\images\card-2.jpg" alt="card-image" class="card__image">
+              <img src="<%=require('../../src/images/card-2.jpg').default%>" alt="card-image" class="card__image">
               <p class="card__date">2 августа, 2019</p>
               <h3 class="card__title">Лесные огоньки: история одной фотографии</h3>
               <h4 class="card__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</h4>
@@ -62,7 +62,7 @@
               </button>
             </div>
             <div class="card">
-              <img src="src\images\card-3.jpg" alt="card-image" class="card__image">
+              <img src="<%=require('../../src/images/card-3.jpg').default%>" alt="card-image" class="card__image">
               <p class="card__date">2 августа, 2019</p>
               <h3 class="card__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
               <h4 class="card__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</h4>
@@ -84,13 +84,13 @@
       </section>
 
       <section class="not-found">
-        <img src="../src/images/not-found.svg" alt="not-found" class="not-found__image">
+        <img src="<%=require('../../src/images/not-found.svg').default%>" alt="not-found" class="not-found__image">
         <h2 class="not-found__title">Ничего не найдено</h2>
         <p class="not-found__subtitle">К сожалению по вашему запросу ничего не найдено.</p>
       </section>
 
       <section class="author">
-        <img src="../src/images/avatar.svg" alt="avatar" class="avatar">
+        <img src="<%=require('../../src/images/avatar.svg').default%>" alt="avatar" class="avatar">
         <div class="author__about">
           <h2 class="author__title">Об авторе</h2>
           <p class="author__text">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.</p>
@@ -106,10 +106,10 @@
           </div>
           <div class="footer__social">
             <a href="https://github.com/iivanitskiy" class="footer__social-link" target="_blank">
-              <img src="../src/images/github.svg" alt="github" class="footer__social-image">
+              <img src="<%=require('../../src/images/github.svg').default%>" alt="github" class="footer__social-image">
             </a>
             <a href="http://www.facebook.com/" class="footer__social-link" target="_blank">
-              <img src="../src/images/fb.svg" alt="facebook" class="footer__social-image" target="_blank">
+              <img src="<%=require('../../src/images/fb.svg').default%>" alt="facebook" class="footer__social-image" target="_blank">
             </a>
           </div>
       </footer>
@@ -117,7 +117,7 @@
       <section>
         <div class="popup">
           <div class="popup__container">
-            <img src="src\images\close.svg" alt="close" class="popup__close">
+            <img src="<%=require('../../src/images/close.svg').default%>" alt="close" class="popup__close">
             <h3 class="popup__title">Вход</h3>
             <form class="popup__form">
               <span class="popup__input-type">Email</span>
@@ -133,7 +133,7 @@
         </div>
         <div class="popup">
           <div class="popup__container">
-            <img src="src\images\close.svg" alt="close" class="popup__close">
+            <img src="<%=require('../../src/images/close.svg').default%>" alt="close" class="popup__close">
             <h3 class="popup__title">Регистрация</h3>
             <form class="popup__form">
               <span class="popup__input-type">Email</span>
@@ -153,7 +153,7 @@
         </div>
         <div class="popup">
           <div class="popup__container">
-            <img src="src\images\close.svg" alt="close" class="popup__close">
+            <img src="<%=require('../../src/images/close.svg').default%>" alt="close" class="popup__close">
             <h3 class="popup__title">Пользователь успешно зарегистрирован!</h3>
             <a href="#" class="popup__enter">Выполнить вход</a>
           </div>
