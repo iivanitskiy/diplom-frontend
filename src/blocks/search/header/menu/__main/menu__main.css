@@ -1,0 +1,16 @@
+.menu__main {
+  margin-right: 32px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.underline {
+  padding-bottom: 28px;
+  background: linear-gradient(white,white) bottom center no-repeat;
+  background-size: 100% 3px;
+}

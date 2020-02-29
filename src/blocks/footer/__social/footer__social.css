@@ -1,0 +1,6 @@
+@import url(./__social-image/footer__social-image.css);
+@import url(./__social-link/footer__social-link.css);
+
+.footer__social {
+  margin-left: 10px;
+}

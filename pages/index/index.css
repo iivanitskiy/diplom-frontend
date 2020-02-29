@@ -1,0 +1,20 @@
+@import url(../../src/vendor/normalize.css);
+@import url(../../src/vendor/fonts.css);
+@import url(../../src/blocks/search/search.css);
+@import url(../../src/blocks/author/author.css);
+@import url(../../src/blocks/footer/footer.css);
+@import url(../../src/blocks/cards/cards.css);
+@import url(../../src/blocks/load/load.css);
+@import url(../../src/blocks/not-found/not-found.css);
+@import url(../../src/blocks/popup/popup.css);
+@import url(../../src/blocks/saved/saved.css);
+
+.page {
+  min-width: 300px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.main {
+  background-color: white;
+}

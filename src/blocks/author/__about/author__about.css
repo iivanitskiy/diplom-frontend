@@ -1,0 +1,7 @@
+@import url(./__text/author__text.css);
+@import url(./__title/author__title.css);
+
+.author__about {
+  width: 600px;
+  height: 144px;
+}

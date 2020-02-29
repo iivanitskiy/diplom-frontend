@@ -1,0 +1,6 @@
+@import url(./__about/author__about.css);
+@import url(./avatar/avatar.css);
+
+.author {
+  display: flex;
+}
