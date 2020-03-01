@@ -7,3 +7,9 @@
   background-size: cover;
   background-position: center;
 }
+
+@media screen and (max-width: 500px) {
+  .search {
+    height: 536px;
+  }
+}

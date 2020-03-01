@@ -4,3 +4,9 @@
 .author {
   display: flex;
 }
+
+@media screen and (max-width: 530px) {
+  .author {
+    flex-direction: column;
+  }
+}

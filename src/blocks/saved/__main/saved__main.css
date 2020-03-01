@@ -14,3 +14,16 @@
   background: linear-gradient(black,black) bottom center no-repeat;
   background-size: 100% 3px;
 }
+
+@media screen and (max-width: 769px) {
+  .saved__main {
+    margin-right: 12px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .underline_black {
+    padding-bottom: 33px;
+    background: linear-gradient(black,black) bottom center no-repeat;
+    background-size: 100% 3px;
+  }
+}

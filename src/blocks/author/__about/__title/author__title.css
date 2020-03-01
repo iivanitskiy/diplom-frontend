@@ -6,3 +6,25 @@
   font-size: 40px;
   line-height: 46px;
 }
+
+@media screen and (max-width: 1000px) {
+  .author__title {
+    margin: 110px 0 16px 0;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .author__title {
+    margin: 40px 0 16px 0;
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .author__title {
+    margin: 24px 0 16px 16px;
+    font-size: 30px;
+    line-height: 40px;
+  }
+}

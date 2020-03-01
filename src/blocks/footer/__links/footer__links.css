@@ -1,5 +1,10 @@
 @import url(./__link/footer__link.css);
 
-.footer__links {
-  margin-left: 550px;
+@media screen and (max-width: 700px) {
+  .footer__links {
+    margin-left: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+  }
 }

@@ -4,6 +4,10 @@
 
 .info {
   border-top: 1px solid rgba(0, 0, 0, 0.2);
-  height: 294px;
   background: white;
+}
+
+@media screen and (max-width: 769px) {
+  .info {
+  }
 }

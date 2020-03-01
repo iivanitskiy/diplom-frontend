@@ -1,10 +1,22 @@
 .info__title {
   margin: 0 auto 0 104px;
-  width: 530px;
+  width: auto;
   font-family: 'Robotoslab';
   font-style: normal;
   font-weight: normal;
   font-size: 40px;
   line-height: 46px;
   color: #1A1B22;
+}
+
+@media screen and (max-width: 769px) {
+  .info__title {
+    margin: 0 0 0 40px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .info__title {
+    margin: 0 0 0 16px;
+  }
 }

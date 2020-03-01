@@ -2,6 +2,5 @@
 @import url(./__title/author__title.css);
 
 .author__about {
-  width: 600px;
-  height: 144px;
+  margin: 0 5% 0 0;
 }

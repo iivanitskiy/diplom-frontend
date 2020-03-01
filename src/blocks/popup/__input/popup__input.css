@@ -25,3 +25,21 @@
   color: #000000;
   opacity: 0.2;
 }
+
+@media screen and (max-width: 500px) {
+  .popup__input {
+    width: 360px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .popup__input {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .popup__input {
+    width: 280px;
+  }
+}

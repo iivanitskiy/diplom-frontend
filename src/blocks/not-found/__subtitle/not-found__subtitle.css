@@ -1,7 +1,7 @@
 .not-found__subtitle {
   margin: 16px auto 80px;
   text-align: center;
-  width: 340px;
+  width: auto;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: normal;

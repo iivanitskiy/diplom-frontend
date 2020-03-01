@@ -14,3 +14,10 @@
   background: linear-gradient(white,white) bottom center no-repeat;
   background-size: 100% 3px;
 }
+
+@media screen and (max-width: 769px) {
+  .menu__main {
+    margin-right: 16px;
+    font-size: 18px;
+  }
+}

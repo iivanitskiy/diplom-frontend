@@ -8,3 +8,10 @@
   text-decoration: none;
   cursor: pointer;
 }
+
+@media screen and (max-width: 769px) {
+  .saved__button {
+    margin-right: 14px;
+    margin-left: 12px;
+  }
+}

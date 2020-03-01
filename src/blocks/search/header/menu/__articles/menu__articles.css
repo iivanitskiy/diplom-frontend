@@ -8,3 +8,9 @@
   line-height: 24px;
   color: #B6BCBF;
 }
+
+@media screen and (max-width: 769px) {
+  .menu__articles {
+    margin-right: 0;
+  }
+}

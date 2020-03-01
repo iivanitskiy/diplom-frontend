@@ -5,3 +5,16 @@
   font-weight: bold;
   font-size: 20px;
 }
+
+@media screen and (max-width: 769px) {
+  .saved__title {
+    margin: 30px 0 26px 40px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .saved__title {
+    font-size: 16px;
+    margin: 30px 0 26px 16px;
+  }
+}

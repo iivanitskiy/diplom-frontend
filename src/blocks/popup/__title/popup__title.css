@@ -6,3 +6,9 @@
   font-size: 24px;
   color: #1A1B22;
 }
+
+@media screen and (max-width: 500px) {
+  .popup__title {
+    width: 100%;
+  }
+}

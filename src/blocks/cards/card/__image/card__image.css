@@ -1,5 +1,5 @@
 .card__image {
-  height: 272px;
+  height: auto;
   width: 100%;
   background-size: cover;
   border-top-left-radius: 15px;

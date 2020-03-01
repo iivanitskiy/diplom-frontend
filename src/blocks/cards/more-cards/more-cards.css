@@ -20,3 +20,19 @@
 .more-cards:hover {
   opacity: 0.9;
 }
+
+@media screen and (max-width: 769px) {
+  .more-cards {
+    margin: 22px auto 12px auto;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .more-cards {
+    margin: 15px auto 32px auto;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

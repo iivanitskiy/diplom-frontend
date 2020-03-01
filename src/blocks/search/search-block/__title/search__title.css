@@ -9,3 +9,19 @@
   line-height: 64px;
   color: #FFFFFF;
 }
+
+@media screen and (max-width: 769px) {
+  .search__title {
+    margin: 38px auto 16px 17%;
+    width: auto;
+    align-self: flex-start;
+    font-size: 36px;
+    line-height: 45px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .search__title {
+    margin: 30px auto 0 16px;
+  }
+}

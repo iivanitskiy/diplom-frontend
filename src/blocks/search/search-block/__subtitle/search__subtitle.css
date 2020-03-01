@@ -1,6 +1,6 @@
 .search__subtitle {
-  align-self: flex-start;
-  margin-left: 416px;
+  align-self: center;
+  margin-right: 4%;
   width: 545px;
   height: 48px;
   font-family: 'Roboto';
@@ -9,4 +9,20 @@
   font-size: 18px;
   line-height: 24px;
   color: #FFFFFF;
+}
+
+@media screen and (max-width: 769px) {
+  .search__subtitle {
+    margin: 0;
+    padding-right: 30px;
+    width: 60%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .search__subtitle {
+    margin: 0 auto 0 16px;
+    width: auto;
+  }
 }

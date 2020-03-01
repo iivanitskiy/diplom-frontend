@@ -22,3 +22,9 @@
 .search__input:focus {
   border: none;
 }
+
+@media screen and (max-width: 769px) {
+  .search__input {
+    width: 80%;
+  }
+}

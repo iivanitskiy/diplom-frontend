@@ -1,10 +1,19 @@
 .cards__title {
-  padding-top: 80px;
-  margin: 0 0 64px 104px;
+  padding-top: 40px;
+  margin: 0 0 64px 10%;
   font-family: 'Robotoslab';
   font-style: normal;
   font-weight: normal;
   font-size: 40px;
   line-height: 46px;
   color: #1A1B22;
+}
+
+@media screen and (max-width: 769px) {
+  .cards__title {
+    padding-top: 32px;
+    margin: 0 auto 24px;
+    font-size: 30px;
+    line-height: 34px;
+  }
 }

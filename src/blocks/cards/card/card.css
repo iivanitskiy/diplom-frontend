@@ -16,9 +16,10 @@
 @import url(./__delete-tip/card__delete-tip.css);
 
 .card {
-  width: 400px;
-  height: 576px;
+  padding-bottom: 30px;
+  position: relative;
+  width: 100%;
+  height: auto;
   border-radius: 15px;
   background-color: #FFFFFF;
-  position: relative;
 }
