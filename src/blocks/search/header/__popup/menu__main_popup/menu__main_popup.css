@@ -1,0 +1,10 @@
+.menu__main_popup {
+  display: none;
+  margin: 32px auto 24px 16px;
+}
+
+@media screen and (max-width: 500px) {
+  .menu__main_popup {
+    display: block;
+  }
+}

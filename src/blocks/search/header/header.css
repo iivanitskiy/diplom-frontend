@@ -1,7 +1,9 @@
 @import url(./title/title.css);
 @import url(./menu/menu.css);
+@import url(./__popup/header__popup.css);
 
 .header {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;

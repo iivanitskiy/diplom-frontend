@@ -20,6 +20,13 @@
 
 @media screen and (max-width: 700px) {
   .footer__link {
+    margin-right: 16px;
     margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .footer__link {
+    margin-right: 0;
   }
 }

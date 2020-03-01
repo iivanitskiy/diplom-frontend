@@ -5,8 +5,8 @@
 .footer {
   position: relative;
   white-space: nowrap;
-  width: auto;
-  height: 80px;
+  width: 100%;
+  height: auto;
   display: flex;
   align-items: center;
 }

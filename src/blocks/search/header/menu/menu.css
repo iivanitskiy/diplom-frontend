@@ -3,6 +3,7 @@
 @import url(./__button-image/menu__button-image.css);
 @import url(./__main/menu__main.css);
 @import url(./__articles/menu__articles.css);
+@import url(./__close/menu__close.css);
 
 .menu {
   display: flex;

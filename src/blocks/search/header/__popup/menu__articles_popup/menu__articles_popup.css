@@ -1,0 +1,12 @@
+.menu__articles_popup {
+  display: none;
+  color: #fff;
+  align-self: start;
+  margin: 0 auto 32px 16px;
+}
+
+@media screen and (max-width: 500px) {
+  .menu__articles_popup {
+    display: block;
+  }
+}

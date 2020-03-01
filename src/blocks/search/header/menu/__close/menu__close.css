@@ -1,0 +1,12 @@
+.menu__close {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  .menu__close {
+    display: block;
+    position: absolute;
+    top: 32px;
+    right: 35px;
+  }
+}
