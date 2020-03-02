@@ -1,0 +1,10 @@
+.menu__button-image_popup {
+  display: none;
+  margin-right: 25%;
+}
+
+@media screen and (max-width: 500px) {
+  .menu__button-image_popup {
+    display: flex;
+  }
+}

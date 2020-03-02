@@ -1,0 +1,10 @@
+.card__delete-tip-text {
+  align-items: center;
+  text-align: center;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 12px;
+  color: #000;
+}

@@ -1,0 +1,26 @@
+.search__form {
+  position: relative;
+  width: 608px;
+  height: 64px;
+  margin: 64px 0 80px 0;
+  background-color: #fff;
+  border: none;
+  border-radius: 32px;
+}
+
+@media screen and (max-width: 769px) {
+  .search__form {
+    width: 65%;
+    top: 30px;
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .search__form {
+    position: absolute;
+    top: 315px;
+    left: 10%;
+    width: 80%;
+  }
+}

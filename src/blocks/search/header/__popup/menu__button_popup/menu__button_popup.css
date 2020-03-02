@@ -1,0 +1,15 @@
+.menu__button_popup {
+  display: none;
+  align-items: center;
+  text-align: center;
+  width: 90%;
+  height: 56px;
+  margin: 0;
+  border-radius: 100px;
+}
+
+@media screen and (max-width: 500px) {
+  .menu__button_popup {
+    display: flex;
+  }
+}

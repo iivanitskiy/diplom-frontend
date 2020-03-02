@@ -1,0 +1,16 @@
+.menu__articles {
+  margin-right: 32px;
+  text-decoration: none;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #B6BCBF;
+}
+
+@media screen and (max-width: 769px) {
+  .menu__articles {
+    margin-right: 0;
+  }
+}

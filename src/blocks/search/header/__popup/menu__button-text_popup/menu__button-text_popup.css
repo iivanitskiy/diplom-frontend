@@ -1,0 +1,10 @@
+.menu__button-text_popup {
+  display: none;
+  margin: auto 0 auto auto;
+}
+
+@media screen and (max-width: 500px) {
+  .menu__button-text_popup {
+    display: block;
+  }
+}

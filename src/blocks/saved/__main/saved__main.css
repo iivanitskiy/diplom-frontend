@@ -1,0 +1,29 @@
+.saved__main {
+  margin-right: 32px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  text-decoration: none;
+  color: #1A1B22;
+}
+
+.underline_black {
+  padding-bottom: 30px;
+  background: linear-gradient(black,black) bottom center no-repeat;
+  background-size: 100% 3px;
+}
+
+@media screen and (max-width: 769px) {
+  .saved__main {
+    margin-right: 12px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .underline_black {
+    padding-bottom: 33px;
+    background: linear-gradient(black,black) bottom center no-repeat;
+    background-size: 100% 3px;
+  }
+}

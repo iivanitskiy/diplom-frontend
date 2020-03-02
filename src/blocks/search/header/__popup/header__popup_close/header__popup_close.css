@@ -1,0 +1,15 @@
+.header__popup_close {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  .header__popup_close {
+    display: block;
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    top: 13px;
+    right: 30px;
+    cursor: pointer;
+  }
+}

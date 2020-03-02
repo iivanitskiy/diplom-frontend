@@ -1,0 +1,17 @@
+.saved__articles {
+  margin-right: 32px;
+  text-decoration: none;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1A1B22;
+}
+
+@media screen and (max-width: 769px) {
+  .saved__articles {
+    margin-right: 0;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,6 @@
+@import url(./__text/author__text.css);
+@import url(./__title/author__title.css);
+
+.author__about {
+  margin: 0 5% 0 0;
+}

@@ -1,0 +1,16 @@
+.popup__error {
+  margin-top: 3px;
+  margin-bottom: 13px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: #FF0000;
+  visibility: hidden;
+}
+
+.popup__error_user {
+  margin: 0 0 8px;
+  align-self: center;
+}

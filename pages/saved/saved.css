@@ -1,0 +1,15 @@
+@import url(../../src/vendor/normalize.css);
+@import url(../../src/vendor/fonts.css);
+@import url(../../src/blocks/footer/footer.css);
+@import url(../../src/blocks/cards/cards.css);
+@import url(../../src/blocks/saved/saved.css);
+
+.page {
+  min-width: 300px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.main {
+  background-color: white;
+}

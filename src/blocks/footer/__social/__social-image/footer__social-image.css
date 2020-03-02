@@ -1,0 +1,31 @@
+@media screen and (max-width: 700px) {
+  .footer__social-image {
+    position: absolute;
+    bottom: 77px;
+    left: 80vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer__social-image {
+    position: absolute;
+    bottom: 77px;
+    left: 75vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .footer__social-image {
+    position: absolute;
+    bottom: 77px;
+    left: 70vw;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .footer__social-image {
+    position: absolute;
+    bottom: 77px;
+    left: 67vw;
+  }
+}

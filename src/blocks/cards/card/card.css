@@ -1,0 +1,25 @@
+@import url(./__bookmark-image/card__bookmark-image.css);
+@import url(./__bookmark-image_marked/card__bookmark-image_marked.css);
+@import url(./__bookmark-text/card__bookmark-text.css);
+@import url(./__bookmark-tip/card__bookmark-tip.css);
+@import url(./__bookmark/card__bookmark.css);
+@import url(./__date/card__date.css);
+@import url(./__image/card__image.css);
+@import url(./__source/card__source.css);
+@import url(./__text/card__text.css);
+@import url(./__title/card__title.css);
+@import url(./__delete-image/card__delete-image.css);
+@import url(./__delete/card__delete.css);
+@import url(./__keyword-text/card__keyword-text.css);
+@import url(./__keyword/card__keyword.css);
+@import url(./__delete-tip-text/card__delete-tip-text.css);
+@import url(./__delete-tip/card__delete-tip.css);
+
+.card {
+  padding-bottom: 30px;
+  position: relative;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  background-color: #FFFFFF;
+}

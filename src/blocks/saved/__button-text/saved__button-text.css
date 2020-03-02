@@ -1,0 +1,15 @@
+.saved__button-text {
+  text-decoration: none;
+  padding: 10px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  color: #1A1B22;
+}
+
+@media screen and (max-width:769px) {
+  .saved__button-text {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,38 @@
+.more-cards {
+  display: block;
+  width: 288px;
+  height: 64px;
+  margin: 64px auto auto;
+  border: none;
+  outline: none;
+  border-radius: 32px;
+  color: #1A1B22;
+  background-color: #fff;
+  cursor: pointer;
+  font-family: 'Roboto';
+  font-size: 18px;
+  line-height: 24px;
+  font-style: normal;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.more-cards:hover {
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 769px) {
+  .more-cards {
+    margin: 22px auto 12px auto;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .more-cards {
+    margin: 15px auto 32px auto;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

@@ -1,0 +1,12 @@
+@import url(./title/title.css);
+@import url(./menu/menu.css);
+@import url(./__popup/header__popup.css);
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
+}

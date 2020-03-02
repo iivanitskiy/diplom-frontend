@@ -1,0 +1,13 @@
+@import url(./__keywords/info__keywords.css);
+@import url(./__subtitle/info__subtitle.css);
+@import url(./__title/info__title.css);
+
+.info {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  background: white;
+}
+
+@media screen and (max-width: 769px) {
+  .info {
+  }
+}

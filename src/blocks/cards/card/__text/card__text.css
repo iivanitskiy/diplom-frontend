@@ -1,0 +1,18 @@
+.card__text {
+  margin: 16px 24px 18px 24px;
+  width: auto;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #1A1B22;
+}
+
+@media screen and (max-width: 769px) {
+  .card__text {
+    margin: 10px 16px 12px 16px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
