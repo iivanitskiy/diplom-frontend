@@ -2,7 +2,7 @@ export default class NewApi {
   constructor() {
   }
   getUser() {
-    return fetch('http://www.newsexplorer.ga/api/users/me', {
+    return fetch('https://www.newsexplorer.ga/api/users/me', {
         credentials: 'include',
         method: 'GET',
     })
@@ -16,7 +16,7 @@ export default class NewApi {
     })
   }
   deleteArticle(id) {
-    return fetch(`http://www.newsexplorer.ga/api/articles/${id}`, {
+    return fetch(`https://www.newsexplorer.ga/api/articles/${id}`, {
       credentials: 'include',
       method: 'DELETE',
       headers: {
@@ -28,7 +28,7 @@ export default class NewApi {
     })
   }
   signOut() {
-    return fetch('http://www.newsexplorer.ga/api/logout', {
+    return fetch('https://www.newsexplorer.ga/api/logout', {
       credentials: 'include',
       method: 'POST',
       headers: {
@@ -43,7 +43,7 @@ export default class NewApi {
     })
   }
   getArticles() {
-    return fetch('http://www.newsexplorer.ga/api/articles', {
+    return fetch('https://www.newsexplorer.ga/api/articles', {
       method: 'GET',
       credentials: 'include',
     })

@@ -9,7 +9,7 @@ export default class MainApi {
   }
 
   signIn(email, password) {
-    return fetch('http://www.newsexplorer.ga/api/signin', {
+    return fetch('https://www.newsexplorer.ga/api/signin', {
       method: 'POST',
       credentials: 'include',
       headers: {
@@ -35,7 +35,7 @@ export default class MainApi {
   }
 
   signUp(email, password, name) {
-    return fetch('http://www.newsexplorer.ga/api/signup', {
+    return fetch('https://www.newsexplorer.ga/api/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -61,7 +61,7 @@ export default class MainApi {
     })
   }
   getUser() {
-    return fetch('http://www.newsexplorer.ga/api/users/me', {
+    return fetch('https://www.newsexplorer.ga/api/users/me', {
         credentials: 'include',
         method: 'GET',
     })
@@ -75,7 +75,7 @@ export default class MainApi {
     })
   }
   createArticle(keyword, title, text, date, source, link, image) {
-    return fetch('http://www.newsexplorer.ga/api/articles', {
+    return fetch('https://www.newsexplorer.ga/api/articles', {
       method: 'POST',
       credentials: 'include',
       headers: {
@@ -99,7 +99,7 @@ export default class MainApi {
     })
   }
   getArticles() {
-    return fetch('http://www.newsexplorer.ga/api/articles', {
+    return fetch('https://www.newsexplorer.ga/api/articles', {
       method: 'GET',
       credentials: 'include',
     })
@@ -113,7 +113,7 @@ export default class MainApi {
     })
   }
   deleteArticle(id) {
-    return fetch(`http://www.newsexplorer.ga/api/articles/${id}`, {
+    return fetch(`https://www.newsexplorer.ga/api/articles/${id}`, {
       credentials: 'include',
       method: 'DELETE',
       headers: {
@@ -125,7 +125,7 @@ export default class MainApi {
     })
   }
   signOut() {
-    return fetch('http://www.newsexplorer.ga/api/logout', {
+    return fetch('https://www.newsexplorer.ga/api/logout', {
       credentials: 'include',
       method: 'POST',
       headers: {
