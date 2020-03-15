@@ -8,46 +8,46 @@
   <meta name='author' content='Иваницкий Иван'>
   <title>NewsExplorer</title>
   <link rel='favicon' href='../../src/images/favicon.svg' type='image/svg+xml'>
-  <link rel="stylesheet" href="style.5079d8af00cde9714a52.css?0fa6a5a3a41e1fe37ddb">
+  <link rel="stylesheet" href="style.0fa8c5a494b8c6ca5405.css?234207efe995214a1c47">
 </head>
 
 <body>
   <main class="main">
-    <div class='page'>
+    <div class="page">
 
       <section class="search">
         <header class="header">
           <p class="title">NewsExplorer</p>
           <div class="menu">
             <a class="menu__main" href="index.html"><span class="underline">Главная</span></a>
-            <!-- <a class="menu__articles" href="saved.html">Сохранённые статьи</a> -->
+            <a class="menu__articles" href="saved.html">Сохранённые статьи</a>
             <div class="menu__button">
-              <a href="saved.html" class="menu__button-text">Авторизоваться</a>
-              <!-- <img src="ea82f02dfc194c1a3ef6f7d443725747.svg" alt="log-out" class="menu__button-image"> -->
+              <a class="menu__button-text">Авторизоваться</a>
+              <img src="ea82f02dfc194c1a3ef6f7d443725747.svg" alt="log-out" class="menu__button-image">
             </div>
           </div>
           <img src="48e1c7c5dcdbd0457e84cc1bfe9d746b.svg" alt="menu-close" class="menu__close">
 
-          <!-- <div class="header__popup">
+          <div class="header__popup">
             <div class="header__container">
               <img src="8442073a2d00bee06ee64155cd156f7c.svg" alt="close" class="header__popup_close">
               <p class="title title_popup">NewsExplorer</p>
               <a class="menu__main menu__main_popup" href="index.html">Главная</a>
               <a class="menu__articles menu__articles_popup" href="saved.html">Сохранённые статьи</a>
               <div class="menu__button menu__button_popup">
-                <a href="saved.html" class="menu__button-text menu__button-text_popup">Авторизоваться</a>
+                <a class="menu__button-text menu__button-text_popup">Авторизоваться</a>
                 <img src="ea82f02dfc194c1a3ef6f7d443725747.svg" alt="log-out" class="menu__button-image menu__button-image_popup">
               </div>
             </div>
-          </div> -->
+          </div>
 
         </header>
 
         <div class="search-block">
           <h1 class="search__title">Что в мире <br> творится?</h1>
           <h2 class="search__subtitle">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</h2>
-          <form class="search__form">
-            <input type="text" class="search__input" placeholder="Введите тему новости">
+          <form class="search__form" name="search">
+            <input name="searchNews" type="text" class="search__input" placeholder="Введите тему новости">
             <button class="search__button">Искать</button>
           </form>
         </div>
@@ -55,40 +55,7 @@
 
       <section class="cards">
           <h2 class="cards__title">Результаты поиска</h2>
-          <div class="cards__result">
-            <div class="card">
-              <img src="97ecc210346cf48e08591c28fcb1a135.jpg" alt="card-image" class="card__image">
-              <p class="card__date">2 августа, 2019</p>
-              <h3 class="card__title">Национальное достояние – парки</h3>
-              <h4 class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</h4>
-              <p class="card__source">Лента.ру</p>
-              <button class="card__bookmark">
-                <span class="card__bookmark-image"></span>
-              </button>
-            </div>
-            <div class="card">
-              <img src="1baef1d752abbf49cd00bd6eed678d76.jpg" alt="card-image" class="card__image">
-              <p class="card__date">2 августа, 2019</p>
-              <h3 class="card__title">Лесные огоньки: история одной фотографии</h3>
-              <h4 class="card__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</h4>
-              <p class="card__source">Медуза</p>
-              <button class="card__bookmark">
-                <span class="card__bookmark-image_marked"></span>
-              </button>
-            </div>
-            <div class="card">
-              <img src="c81fc12c7762fb3fcc8e390b5696a325.jpg" alt="card-image" class="card__image">
-              <p class="card__date">2 августа, 2019</p>
-              <h3 class="card__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
-              <h4 class="card__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</h4>
-              <p class="card__source">Риа</p>
-              <button class="card__bookmark">
-                <span class="card__bookmark-image"></span>
-              </button>
-              <div class="card__bookmark-tip">
-                <p class="card__bookmark-text">Войдите, чтобы сохранять статьи</p>
-              </div>
-            </div>
+          <div id="container" class="cards__result">
           </div>
           <button class="more-cards">Показать еще</button>
       </section>
@@ -114,7 +81,7 @@
       </section>
 
       <footer class="footer">
-        <p class="footer__copyright">&#169; 2020 Supersite, Powered by News API</p>
+        <p class="footer__copyright">&#169; 2020 newsexplorer.ga, Powered by News API</p>
           <div class="footer__links">
             <a href="index.html" class="footer__link">Главная</a>
             <a href="http://praktikum.yandex.ru/" class="footer__link" target="_blank">Яндекс.Практикум</a>
@@ -130,54 +97,55 @@
       </footer>
 
       <section>
-        <div class="popup">
+        <div id="popup-signIn" class="popup">
           <div class="popup__container">
             <img src="8442073a2d00bee06ee64155cd156f7c.svg" alt="close" class="popup__close">
             <h3 class="popup__title">Вход</h3>
-            <form class="popup__form">
+            <form class="popup__form" name="signin">
               <span class="popup__input-type">Email</span>
-              <input class="popup__input" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" placeholder="Введите email" required>
-              <span class="popup__error">Неправильный формат email</span>
+              <input required type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" id="signIn-email" class="popup__input"  placeholder="Введите email">
+              <span class="popup__error popup__error_email"></span>
               <span class="popup__input-type">Пароль</span>
-              <input class="popup__input" name ="password" type="password" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 3}$" placeholder="Введите пароль" required>
-              <span class="popup__error">Неправильный формат пароля</span>
+              <input id="signIn-password" class="popup__input" name ="password" type="password" placeholder="Введите пароль" required pattern=".{8,}">
+              <span class="popup__error popup__error_pass"></span>
+              <span class="popup__error popup__error_auth"></span>
+              <button class="popup__button-enter">Войти</button>
             </form>
-            <button class="popup__button">Войти</button>
-            <span class="popup__text">или&#160;<a href="#" class="popup__registration">Зарегистрироваться</a></span>
+            <span class="popup__text">или&#160;<a class="popup__registration">Зарегистрироваться</a></span>
           </div>
         </div>
-        <div class="popup">
+        <div id="popup-signUp" class="popup">
           <div class="popup__container">
             <img src="8442073a2d00bee06ee64155cd156f7c.svg" alt="close" class="popup__close">
             <h3 class="popup__title">Регистрация</h3>
-            <form class="popup__form">
+            <form class="popup__form" name="signup">
               <span class="popup__input-type">Email</span>
-              <input class="popup__input" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" placeholder="Введите email" required>
-              <span class="popup__error">Неправильный формат email</span>
+              <input required type="email" id="signUp-email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="popup__input" placeholder="Введите email">
+              <span class="popup__error popup-reg__error_email"></span>
               <span class="popup__input-type">Пароль</span>
-              <input class="popup__input" name ="password" type="password" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 3}$" placeholder="Введите пароль" required>
-              <span class="popup__error">Неправильный формат пароля</span>
+              <input id="signUp-password" class="popup__input" name ="password" type="password" placeholder="Введите пароль" required pattern=".{8,}">
+              <span class="popup__error popup-reg__error_pass"></span>
               <span class="popup__input-type">Имя</span>
-              <input class="popup__input" type="text" pattern="[А-ЯЁ][а-яё]{1,}-?[А-ЯЁ]?[а-яё]{0,}" minlength="2" maxlength="30" placeholder="Введите своё имя" required>
-              <span class="popup__error">Неправильный формат имени</span>
-              <span class="popup__error popup__error_user">Такой пользователь уже есть</span>
+              <input id="signUp-name" class="popup__input" type="text"  minlength="2" maxlength="30" placeholder="Введите своё имя" required>
+              <span class="popup__error popup__error_name"></span>
+              <span class="popup__error popup__error_user"></span>
+              <button class="popup__button-reg">Зарегистрироваться</button>
             </form>
-            <button class="popup__button" disabled>Зарегистрироваться</button>
-            <span class="popup__text">или&#160;<a href="#" class="popup__registration">Войти</a></span>
+            <span class="popup__text">или&#160;<a class="popup__enter">Войти</a></span>
           </div>
         </div>
-        <div class="popup">
+        <div id="popup-success" class="popup">
           <div class="popup__container">
             <img src="8442073a2d00bee06ee64155cd156f7c.svg" alt="close" class="popup__close">
             <h3 class="popup__title">Пользователь успешно зарегистрирован!</h3>
-            <a href="#" class="popup__enter">Выполнить вход</a>
+            <a class="popup__enter-reg">Выполнить вход</a>
           </div>
         </div>
       </section>
 
     </div>
   </main>
-  <script src="main.048dd97f94bbfcb260a5.js?0fa6a5a3a41e1fe37ddb"></script>
+  <script src="index.63cffa94af7342de65b0.js?234207efe995214a1c47"></script>
 </body>
 
 </html>
