@@ -9,10 +9,12 @@
 @import url(./__enter/popup__enter.css);
 @import url(./__text/popup__text.css);
 @import url(./__close/popup__close.css);
+@import url(./_is-opened/popup_is-opened.css);
+@import url(./__enter-reg/popup__enter-reg.css);
 
 .popup {
-  /* position: fixed; */
-  display: flex;
+  position: fixed;
+  display: none;
   align-items: center;
   justify-content: center;
   flex-direction: column;

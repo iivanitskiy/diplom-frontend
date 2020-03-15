@@ -3,9 +3,13 @@
 @import url(./__title/not-found__title.css);
 
 .not-found {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   height: 374px;
   background: #F5F6F7;
+}
+
+.not-found.not-found_show {
+  display: flex;
 }

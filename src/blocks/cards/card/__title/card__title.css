@@ -1,5 +1,5 @@
 .card__title {
-  margin: 0 0 0 24px;
+  text-decoration: none;
   font-family: 'Robotoslab';
   font-style: normal;
   font-weight: normal;
@@ -15,8 +15,15 @@
   }
 }
 
+.cardTitleContainer {
+  margin: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 @media screen and (max-width: 769px) {
-  .card__title {
+  .cardTitleContainer {
     margin: 10px 16px;
   }
 }

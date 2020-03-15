@@ -1,6 +1,7 @@
 .card__text {
+  white-space: pre-wrap;
   margin: 16px 24px 18px 24px;
-  width: auto;
+  width: 87%;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: normal;

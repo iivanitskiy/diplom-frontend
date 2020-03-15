@@ -1,4 +1,5 @@
 .menu__articles {
+  display: none;
   margin-right: 32px;
   text-decoration: none;
   font-family: 'Roboto';
@@ -13,4 +14,8 @@
   .menu__articles {
     margin-right: 0;
   }
+}
+
+.menu__articles.menu__articles-show {
+  display: block;
 }

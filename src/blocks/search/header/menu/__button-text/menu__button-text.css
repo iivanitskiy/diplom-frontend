@@ -1,8 +1,14 @@
 .menu__button-text {
+  display: flex;
   text-decoration: none;
   padding: 10px;
   font-family: 'Roboto';
   font-style: normal;
   font-size: 18px;
+  cursor: pointer;
   color: #fff;
+}
+
+.menu__button-text_disabled {
+  pointer-events: none;
 }

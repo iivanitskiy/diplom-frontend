@@ -1,10 +1,8 @@
 .menu__button-image_popup {
   display: none;
-  margin-right: 25%;
+  margin-left: 10px;
 }
 
-@media screen and (max-width: 500px) {
-  .menu__button-image_popup {
-    display: flex;
-  }
+.menu__button-image_popup.menu__button-image_popup-show {
+  display: block;
 }
