@@ -5,7 +5,7 @@
 ### Сервис поиска новостей c возможностью сохранения в личном кабинете.
 
 * npm run dev - запуск в режиме hot-reload 
-* npm run dev - сборка webpack'ом
+* npm run build - сборка webpack'ом
 * npm run deploy - деплой на hg-pages
 
 ###### (HTML, CSS, JS, Webpack, Node.JS, express, MongoDB)
