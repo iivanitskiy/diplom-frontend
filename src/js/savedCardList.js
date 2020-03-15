@@ -60,7 +60,6 @@ export default class SavedCardList {
         infoSubtitle.textContent = "Сохранённые статьи";
         const infoKeyWords = document.createElement('p');
         infoKeyWords.classList.add('info__keywords');
-        infoKeyWords.textContent = `По ключевым словам: ${keywordsKeys.va} и другим`;
         infoTitle.textContent = `${userName}, у вас ${res.data.length} сохранённых статей`;
         while (info.firstChild) {
           info.removeChild(info.lastChild);
@@ -74,10 +73,13 @@ export default class SavedCardList {
             infoKeyWords.textContent = `По ключевому слову ${keywordsKeys[0]}`;
             break;
           case 2:
-            infoKeyWords.textContent = `Нет ключевых слов`;
+            infoKeyWords.textContent = `По ключевым словам ${keywordsKeys[0]} и ${keywordsKeys[1]}`;
+            break;
+          case 3:
+            infoKeyWords.textContent = `По ключевым словам ${keywordsKeys[0]}, ${keywordsKeys[1]}  и ${keywordsKeys[2]}`;
             break;
           default:
-            infoKeyWords.textContent = `По ключевому слову ${keywordsKeys.length - 2 }`;
+            infoKeyWords.textContent = `По ключевым словам ${keywordsKeys[0]}, ${keywordsKeys[1]} и ${keywordsKeys.length - 2 } другим`;
             break;
         }
 

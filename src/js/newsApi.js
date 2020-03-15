@@ -1,6 +1,6 @@
 export default class NewsApi {
   constructor({ apiKey, pageSize }) {
-    this.url = "http://newsapi.org/v2/everything?";
+    this.url = "https://newsapi.org/v2/everything?";
     this.apiKey = apiKey;
     this.pageSize = pageSize;
   }

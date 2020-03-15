@@ -38,7 +38,7 @@ function authorized() {
       menuButtonImagePopup.classList.add('menu__button-image_popup-show');
     }
     if (!user) {
-      window.location.replace("http://localhost:8080/index.html");
+      window.location.replace("/index.html");
     }
   })
 }
