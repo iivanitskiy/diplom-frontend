@@ -1,4 +1,4 @@
-import { mainApi } from "../../pages/index/index";
+import { mainApi } from "./api";
 
 export default class NewsCard {
   constructor(id, image, date, title, description, source, link, keyword) {

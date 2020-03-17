@@ -7,7 +7,7 @@
   <meta name='description' content='NewsExplorer - поиск новостей'>
   <meta name='author' content='Иваницкий Иван'>
   <title>NewsExplorer</title>
-  <link rel='favicon' href='../../src/images/favicon.svg' type='image/svg+xml'>
+  <link rel="icon" type="image/png" href="<%=require('../../src/images/favicon.png').default%>">
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.index.css %>">
 </head>
 
@@ -72,7 +72,7 @@
       </section>
 
       <section class="author">
-        <img src="<%=require('../../src/images/avatar.jpg').default%>" alt="avatar" class="avatar">
+        <img src="<%=require('../../src/images/avatar.jpeg').default%>" alt="avatar" class="avatar">
         <div class="author__about">
           <h2 class="author__title">Об авторе</h2>
           <p class="author__text">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.</p>

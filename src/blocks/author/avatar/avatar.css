@@ -1,5 +1,8 @@
 .avatar {
   margin: 80px 56px 80px 104px;
+  width: 464px;
+  height: 464px;
+  border-radius: 50%;
 }
 
 @media screen and (max-width: 1000px) {

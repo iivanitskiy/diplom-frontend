@@ -1,11 +1,9 @@
 import SavedNewsCard from './savedNewsCard';
-import NewApi from "../../src/js/newApi";
-
-const newApi = new NewApi();
+import { mainApi } from "./api";
 
 let userName;
 
-newApi.getUser().then((user) => {
+mainApi.getUser().then((user) => {
   if (user) {
     userName = user.data.name
   };
@@ -76,7 +74,7 @@ export default class SavedCardList {
             infoKeyWords.textContent = `По ключевым словам ${keywordsKeys[0]} и ${keywordsKeys[1]}`;
             break;
           case 3:
-            infoKeyWords.textContent = `По ключевым словам ${keywordsKeys[0]}, ${keywordsKeys[1]}  и ${keywordsKeys[2]}`;
+            infoKeyWords.textContent = `По ключевым словам ${keywordsKeys[0]}, ${keywordsKeys[1]} и ${keywordsKeys[2]}`;
             break;
           default:
             infoKeyWords.textContent = `По ключевым словам ${keywordsKeys[0]}, ${keywordsKeys[1]} и ${keywordsKeys.length - 2 } другим`;
@@ -96,7 +94,7 @@ export default class SavedCardList {
     }
     render() {
       return () => {
-        newApi.getArticles()
+        mainApi.getArticles()
         .then(this.renderResults());
       }
     }

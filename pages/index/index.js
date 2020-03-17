@@ -1,11 +1,14 @@
 import "./index.css";
-import MainApi from "../../src/js/api";
+import { mainApi } from "../../src/js/api";
 import NewsApi from "../../src/js/newsApi";
 import CardList from "../../src/js/cardList";
-import { popupSignIn } from "../../src/js/popup";
-import { errorEmail, errorPass, errorRegEmail, errorRegPass, errorName } from "../../src/js/error";
+import Popup from "../../src/js/popup";
+import { errorEmail, errorPass, errorName } from "../../src/js/error";
 import { NEWS_API_PARAMETERS, week } from "../../src/js/constants";
 
+const popupRegistrationLink = document.querySelector('.popup__registration');
+const popupEnterLink = document.querySelector('.popup__enter');
+const popupEnterReg = document.querySelector('.popup__enter-reg');
 const popupErrorEmail = document.querySelector('.popup__error_email');
 const popupErrorPass = document.querySelector('.popup__error_pass');
 const popupRegErrorEmail = document.querySelector('.popup-reg__error_email');
@@ -33,11 +36,30 @@ const searchForm = document.forms.search;
 const searchInput = document.querySelector('.search__input');
 
 export const buttonMoreCards = document.querySelector('.more-cards');
+const headerPopup = document.querySelector('.header__popup')
 const container = document.querySelector('#container');
 
-export const mainApi = new MainApi();
 const newsApi = new NewsApi(NEWS_API_PARAMETERS);
 const newsCardList = new CardList(container);
+
+const popupSignIn = new Popup(document.querySelector('#popup-signIn'));
+const popupSignUp = new Popup(document.querySelector('#popup-signUp'));
+const popupSuccess = new Popup(document.querySelector('#popup-success'));
+
+popupRegistrationLink.addEventListener('click', function () {
+  popupSignIn.close();
+  popupSignUp.open();
+});
+
+popupEnterLink.addEventListener('click', function () {
+  popupSignUp.close();
+  popupSignIn.open();
+});
+
+popupEnterReg.addEventListener('click', function () {
+  popupSuccess.close();
+  popupSignIn.open();
+});
 
 menuButtonText.addEventListener('click', function () {
   popupSignIn.open();
@@ -45,7 +67,7 @@ menuButtonText.addEventListener('click', function () {
 
 menuButtonTextPopup.addEventListener('click', function () {
   popupSignIn.open();
-  document.querySelector('.header__popup').classList.remove('header__popup-opened');
+  headerPopup.classList.remove('header__popup-opened');
 });
 
 menuButtonImage.addEventListener('click', function () {
@@ -57,16 +79,22 @@ menuButtonImagePopup.addEventListener('click', function () {
 });
 
 document.querySelector('.header__popup_close').addEventListener('click', function() {
-  document.querySelector('.header__popup').classList.remove('header__popup-opened');
+  headerPopup.classList.remove('header__popup-opened');
 });
 
 document.querySelector('.menu__close').addEventListener('click', function() {
-  document.querySelector('.header__popup').classList.add('header__popup-opened');
+  headerPopup.classList.add('header__popup-opened');
 });
 
-signInForm.addEventListener('submit', function() {
+signInForm.addEventListener('submit', function(event) {
   event.preventDefault();
   mainApi.signIn(signInEmail.value, signInPassword.value)
+  .then(res => {
+    if (res === 200) {
+      authorized();
+      popupSignIn.close();
+    }
+  })
 });
 
 signInForm.addEventListener('input', function () {
@@ -75,26 +103,32 @@ signInForm.addEventListener('input', function () {
   } else if (signInEmail.value.length > 200 || signInPassword.value.length > 30) {
     popupButtonEnter.setAttribute('disabled', true);
   } else if (signInEmail.validity.typeMismatch) {
-    popupErrorEmail.textContent = 'Неправильный формат email',
+    popupErrorEmail.textContent = 'Неправильный формат email';
     popupErrorEmail.style.visibility = 'visible';
     popupButtonEnter.setAttribute('disabled', true);
   } else if (signInPassword.validity.typeMismatch) {
-    popupErrorPass.textContent = 'Неправильный формат пароля',
+    popupErrorPass.textContent = 'Неправильный формат пароля';
     popupErrorPass.style.visibility = 'visible';
     popupButtonEnter.setAttribute('disabled', true);
   } else {
     popupErrorEmail.style.visibility = 'hidden';
     popupErrorPass.style.visibility = 'hidden';
-    popupButtonEnter.removeAttribute('disabled')
+    popupButtonEnter.removeAttribute('disabled');
   }
 });
 
 errorEmail(signInForm, signInEmail, popupErrorEmail);
 errorPass(signInForm, signInPassword, popupErrorPass);
 
-signUpForm.addEventListener('submit', function() {
+signUpForm.addEventListener('submit', function(event) {
   event.preventDefault();
   mainApi.signUp(signUpEmail.value, signUpPassword.value, signUpName.value)
+  .then(res => {
+    if (res) {
+      popupSignUp.close();
+      popupSuccess.open();
+    }
+  })
 });
 
 signUpForm.addEventListener('input', function () {
@@ -103,30 +137,29 @@ signUpForm.addEventListener('input', function () {
   } else if (signUpEmail.value.length > 200 || signUpPassword.value.length > 30) {
     popupButtonReg.setAttribute('disabled', true);
   } else if (signUpEmail.validity.typeMismatch) {
-    popupRegErrorEmail.textContent = 'Неправильный формат email',
+    popupRegErrorEmail.textContent = 'Неправильный формат email';
     popupRegErrorEmail.style.visibility = 'visible';
     popupButtonReg.setAttribute('disabled', true);
   } else if (signUpPassword.validity.typeMismatch) {
-    popupRegErrorPass.textContent = 'Неправильный формат пароля',
-    popupRegErrorPass.style.visibility = 'visible';
+    popupRegErrorPass.textContent = 'Неправильный формат пароля';
     popupButtonReg.setAttribute('disabled', true);
   } else if (signUpName.validity.typeMismatch) {
-    popupRegErrorPass.textContent = 'Неправильный формат имени',
+    popupRegErrorPass.textContent = 'Неправильный формат имени';
     popupRegErrorPass.style.visibility = 'visible';
     popupButtonReg.setAttribute('disabled', true);
   } else {
     popupRegErrorEmail.style.visibility = 'hidden';
     popupRegErrorPass.style.visibility = 'hidden';
     popupErrorName.style.visibility = 'hidden';
-    popupButtonReg.removeAttribute('disabled')
+    popupButtonReg.removeAttribute('disabled');
   }
 });
 
-errorRegEmail(signUpForm, signUpEmail, popupRegErrorEmail);
-errorRegPass(signUpForm, signUpPassword, popupRegErrorPass);
+errorEmail(signUpForm, signUpEmail, popupRegErrorEmail);
+errorPass(signUpForm, signUpPassword, popupRegErrorPass);
 errorName(signUpForm, signUpName, popupErrorName);
 
-searchForm.addEventListener('submit', function() {
+searchForm.addEventListener('submit', function(event) {
   event.preventDefault();
   if (searchInput.value.length < 1) {
     searchInput.placeholder = "Нужно ввести ключевое слово";

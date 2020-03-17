@@ -1,6 +1,4 @@
-import NewApi from "../../src/js/newApi";
-
-const newApi = new NewApi();
+import { mainApi } from "./api";
 
 export default class SavedNewsCard {
   constructor(id, image, date, title, description, source, link, keyword, reload) {
@@ -84,7 +82,7 @@ export default class SavedNewsCard {
   }
   remove() {
     return (event) => {
-      newApi.deleteArticle(this._id).then (()  => {
+      mainApi.deleteArticle(this._id).then (()  => {
         this.reload();
       })
     }

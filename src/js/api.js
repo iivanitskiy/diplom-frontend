@@ -1,6 +1,3 @@
-import { authorized } from '../../pages/index/index';
-import { popupSignIn, popupSignUp, popupSuccess } from './popup';
-
 const popupErrorUser = document.querySelector('.popup__error_user');
 const popupErrorAuth = document.querySelector('.popup__error_auth');
 
@@ -22,15 +19,11 @@ export default class MainApi {
     })
     .then(res => {
       if (res.ok) {
-        authorized();
-        popupSignIn.close();
+        return res.status;
       }
       if (res.status === 401) {
         popupErrorAuth.textContent = "Ошибка авторизации";
       }
-    })
-    .catch((res) => {
-      return Promise.reject(`Ошибка: ${res}`);
     })
   }
 
@@ -48,16 +41,11 @@ export default class MainApi {
     })
     .then(res => {
       if (res.ok) {
-        popupSignUp.close();
-        popupSuccess.open();
         return res.json();
       }
       if (res.status === 409) {
         popupErrorUser.textContent = "Такой пользователь уже есть";
       }
-    })
-    .catch((res) => {
-      return Promise.reject(`Ошибка: ${res.status}`);
     })
   }
   getUser() {
@@ -69,9 +57,6 @@ export default class MainApi {
       if (res.ok) {
         return res.json();
       }
-    })
-    .catch((res) => {
-      return Promise.reject(`Ошибка: ${res.status}`);
     })
   }
   createArticle(keyword, title, text, date, source, link, image) {
@@ -108,9 +93,6 @@ export default class MainApi {
         return res.json();
       }
     })
-    .catch((res) => {
-      return Promise.reject(`Ошибка: ${res.status}`);
-    })
   }
   deleteArticle(id) {
     return fetch(`https://newsexplorer.ga/api/articles/${id}`, {
@@ -120,8 +102,10 @@ export default class MainApi {
         'Content-Type': 'application/json'
       }
     })
-    .catch((res) => {
-      return Promise.reject(`Ошибка: ${res.status}`);
+    .then(res => {
+      if (res.ok) {
+        return res.json();
+      }
     })
   }
   signOut() {
@@ -140,3 +124,5 @@ export default class MainApi {
     })
   }
 }
+
+export const mainApi = new MainApi();
