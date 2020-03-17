@@ -1,6 +1,7 @@
 # NewsExplorer
 ## https://newsexplorer.ga - Фронт и бэк.
-## Запросы к апи - https://newsexplorer.ga/api
+[![Запросы к апи]](https://newsexplorer.ga/api)
+##  - 
 ### Дипломный проект Яндекс.Практикум.
 ### Сервис поиска новостей c возможностью сохранения в личном кабинете.
 
