@@ -81,9 +81,12 @@ export default class SavedNewsCard {
   return card;
   }
   remove() {
-    return (event) => {
-      mainApi.deleteArticle(this._id).then (()  => {
+    return () => {
+      mainApi.deleteArticle(this._id).then(()  => {
         this.reload();
+      })
+      .catch((res) => {
+        return Promise.reject(`Ошибка: ${res.status}`);
       })
     }
   }

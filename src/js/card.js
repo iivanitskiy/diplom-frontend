@@ -87,12 +87,18 @@ export default class NewsCard {
             e.classList.toggle('card__bookmark-image_marked')
           }
         })
+        .catch((res) => {
+          return Promise.reject(`Ошибка: ${res.status}`);
+        })
       } else {
         mainApi.deleteArticle(this.savedId)
         .then(res => {
           if (res) {
             e.classList.toggle('card__bookmark-image_marked')
           }
+        })
+        .catch((res) => {
+          return Promise.reject(`Ошибка: ${res.status}`);
         })
       }
     }

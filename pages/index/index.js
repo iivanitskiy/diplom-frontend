@@ -71,11 +71,17 @@ menuButtonTextPopup.addEventListener('click', function () {
 });
 
 menuButtonImage.addEventListener('click', function () {
-  mainApi.signOut();
+  mainApi.signOut()
+  .catch((res) => {
+    return Promise.reject(`Ошибка: ${res.status}`);
+  })
 });
 
 menuButtonImagePopup.addEventListener('click', function () {
-  mainApi.signOut();
+  mainApi.signOut()
+  .catch((res) => {
+    return Promise.reject(`Ошибка: ${res.status}`);
+  })
 });
 
 document.querySelector('.header__popup_close').addEventListener('click', function() {
@@ -94,6 +100,9 @@ signInForm.addEventListener('submit', function(event) {
       authorized();
       popupSignIn.close();
     }
+  })
+  .catch((res) => {
+    return Promise.reject(`Ошибка: ${res}`);
   })
 });
 
@@ -128,6 +137,9 @@ signUpForm.addEventListener('submit', function(event) {
       popupSignUp.close();
       popupSuccess.open();
     }
+  })
+  .catch((res) => {
+    return Promise.reject(`Ошибка: ${res}`);
   })
 });
 
@@ -191,13 +203,13 @@ searchForm.addEventListener('submit', function(event) {
 buttonMoreCards.addEventListener('click', () => newsCardList.readMore(searchInput.value));
 
 export function authorized() {
-  mainApi.getUser().then((user) => {
-    if (user) {
+  mainApi.getUser().then((res) => {
+    if (res) {
       container.classList.add('authorized');
       menuArticles.classList.add('menu__articles-show');
-      menuButtonText.textContent = user.data.name;
+      menuButtonText.textContent = res.data.name;
       menuButtonText.classList.add('menu__button-text_disabled');
-      menuButtonTextPopup.textContent = user.data.name;
+      menuButtonTextPopup.textContent = res.data.name;
       menuButtonTextPopup.classList.add('menu__button-text_popup-disabled');
       menuButtonImage.classList.add('menu__button-image_show');
       menuButtonImagePopup.classList.add('menu__button-image_popup-show');
@@ -205,7 +217,9 @@ export function authorized() {
       container.classList.remove('authorized');
     }
   })
-  .catch();
+  .catch((res) => {
+    return Promise.reject(`Ошибка: ${res.status}`);
+  })
 }
 
 window.addEventListener('load', authorized);

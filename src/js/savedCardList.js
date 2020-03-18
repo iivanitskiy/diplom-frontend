@@ -6,7 +6,10 @@ let userName;
 mainApi.getUser().then((user) => {
   if (user) {
     userName = user.data.name
-  };
+  }
+})
+.catch((res) => {
+  return Promise.reject(`Ошибка: ${res.status}`);
 });
 
 export default class SavedCardList {
@@ -95,7 +98,10 @@ export default class SavedCardList {
     render() {
       return () => {
         mainApi.getArticles()
-        .then(this.renderResults());
+        .then(this.renderResults())
+        .catch((res) => {
+          return Promise.reject(`Ошибка: ${res.status}`);
+        });
       }
     }
   }

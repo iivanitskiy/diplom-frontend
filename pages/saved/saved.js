@@ -14,11 +14,17 @@ const menuButtonTextPopup = document.querySelector('.menu__button-text_popup');
 
 
 savedButtonImage.addEventListener('click', function () {
-  mainApi.signOut();
+  mainApi.signOut()
+  .catch((res) => {
+    return Promise.reject(`Ошибка: ${res.status}`);
+  })
 });
 
 menuButtonImagePopup.addEventListener('click', function () {
-  mainApi.signOut();
+  mainApi.signOut()
+  .catch((res) => {
+    return Promise.reject(`Ошибка: ${res.status}`);
+  })
 });
 
 document.querySelector('.menu__close').addEventListener('click', function() {
@@ -30,16 +36,19 @@ document.querySelector('.header__popup_close').addEventListener('click', functio
 });
 
 function authorized() {
-  mainApi.getUser().then((user) => {
-    if (user) {
-      savedButtonText.textContent = user.data.name;
-      menuButtonTextPopup.textContent = user.data.name;
+  mainApi.getUser().then((res) => {
+    if (res) {
+      savedButtonText.textContent = res.data.name;
+      menuButtonTextPopup.textContent = res.data.name;
       menuButtonTextPopup.classList.add('menu__button-text_popup-disabled');
       menuButtonImagePopup.classList.add('menu__button-image_popup-show');
     }
-    if (!user) {
+    if (!res) {
       window.location.replace("/index.html");
     }
+  })
+  .catch((res) => {
+    return Promise.reject(`Ошибка: ${res.status}`);
   })
 }
 
