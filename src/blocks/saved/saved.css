@@ -5,6 +5,7 @@
 @import url(./__main/saved__main.css);
 @import url(./__title/saved__title.css);
 @import url(./__button/saved__button.css);
+@import url(./cards-saved/cards-saved.css);
 
 .saved {
   height: 100%;

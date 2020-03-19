@@ -1,5 +1,5 @@
 .more-cards {
-  display: block;
+  display: none;
   width: 288px;
   height: 64px;
   margin: 64px auto auto;
@@ -35,4 +35,8 @@
     font-size: 14px;
     line-height: 20px;
   }
+}
+
+.more-cards.more-cards_is-show {
+  display: block;
 }

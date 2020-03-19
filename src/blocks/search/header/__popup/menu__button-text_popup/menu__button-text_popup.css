@@ -1,10 +1,15 @@
 .menu__button-text_popup {
   display: none;
-  margin: auto 0 auto auto;
+  padding: 0 20vw 0 20vw ;
+}
+
+.menu__button-text_popup-disabled {
+  pointer-events: none;
 }
 
 @media screen and (max-width: 500px) {
   .menu__button-text_popup {
-    display: block;
+    display: flex;
+
   }
 }

@@ -3,6 +3,7 @@
 @import url(./__social/footer__social.css);
 
 .footer {
+  max-width: 1440px;
   position: relative;
   white-space: nowrap;
   width: 100%;

@@ -10,7 +10,7 @@
 }
 
 .underline_black {
-  padding-bottom: 30px;
+  padding-bottom: 29px;
   background: linear-gradient(black,black) bottom center no-repeat;
   background-size: 100% 3px;
 }
