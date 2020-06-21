@@ -1,4 +1,5 @@
 # NewsExplorer
+## https://iivanitskiy.github.io/diplom-frontend/
 ## https://newsexplorer.ga - Фронт и бэк.
 ### Запросы к апи - https://newsexplorer.ga/api
 #### Дипломный проект Яндекс.Практикум.
@@ -10,4 +11,4 @@
 
 ###### (HTML, CSS, JS, Webpack, Node.JS, express, MongoDB)
 
-### ver 1.0.0
+##### ver 1.0.0
